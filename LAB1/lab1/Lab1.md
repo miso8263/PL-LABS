@@ -19,6 +19,7 @@ The use of pi at line 7 is bound at line 1.  Since pi is not defined within the 
 ###Question 2  
 ####*Scala Basics: Typing*
 Yes, the body of g is well-typed with type ((Int, Int), Int)
+
 '''
 (a, b) is an (Int, (Int, Int)) because
     a:Int because
