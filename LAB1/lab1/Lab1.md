@@ -17,29 +17,29 @@ The use of pi at line 7 is bound at line 1.  Since pi is not defined within the 
 #####(b)
 The use of x at line 3 is bound at line 2, when it is passed into the function f.  This is where x in the scope of f takes its value.  
 
-The use of x at line 6 is bound at line 2, which is checked and passed through at line 5.  
+The use of x at line 6 is bound at line 5, where it is matched to a case and passed through.  
 
-The use of x at line 10 is bound at line 2, which is checked and passed through at line 5.  
+The use of x at line 10 is bound at line 5, where it is matched to a case and passed through.  
 
-The use of x at line 13 is bound at line 1.  The values of x within f are in their own scope.  
+The use of x at line 13 is bound at line 1.  Line 13 is outside the scope of f and is using and passing the value of x taken from line 1.  
 
 ###Question 2  
 ####*Scala Basics: Typing*
 Yes, the body of g is well-typed with type ((Int, Int), Int)
 
 ```
-(a, b) is an (Int, (Int, Int)) because
-    a:Int because
-        1:Int
-    b:(Int, Int) because
-        x:Int
-        3:Int 
 g:((Int, Int), Int) because
-    b:(Int, Int) because
-        x:Int
-        3:Int
-    1:Int
-    a+2:Int because	
-        a:Int
-        2:Int
+    (b, 1): ((Int, Int), Int) because
+		b:(Int, Int) because
+			x:Int
+			3:Int
+		1:Int
+    (b, a+2):((Int, Int), Int) because
+		b:(Int, Int) because
+			x:Int
+			3:Int
+		a+2:Int because	
+			a:Int because
+				1:Int
+			2:Int
 ```
