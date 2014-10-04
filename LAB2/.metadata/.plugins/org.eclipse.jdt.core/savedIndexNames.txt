@@ -1,0 +1,23 @@
+INDEX VERSION 1.126+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB2\.metadata\.plugins\org.eclipse.jdt.core
+3509469506.index
+1299022128.index
+1115467115.index
+4155206848.index
+2118980763.index
+3246321416.index
+305854171.index
+3974580528.index
+2892024569.index
+3065916431.index
+3133528496.index
+1498219845.index
+3485340371.index
+4041092966.index
+163172794.index
+2620941534.index
+30765161.index
+2585743852.index
+2134309348.index
+4108727661.index
+1995173708.index
+1697886153.index
