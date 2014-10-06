@@ -202,7 +202,7 @@ The result is that the expressions are created from different directions but wil
 
 Minus (-) has precedence over left shift (<<).  To have the left shift evaluate first, priority must be enforced using parenthesis.  
 
-When priority is enforced on minus, however, behavior does not change.  This indicates that minus has priority.  
+When priority is enforced on minus, however, behaviour does not change.  This indicates that minus has priority.  
 
 
 #####(c) Give a BNF grammar for floating point numbers made up of a fraction followed by an optional exponent.
@@ -215,4 +215,5 @@ b ::= 0 | i | 0b | ib
 i ::= 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9
 ```
 Where 0-9, ., -, and E are in the set Σ
+ε is the empty string
 
