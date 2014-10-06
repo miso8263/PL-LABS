@@ -69,29 +69,37 @@ object Lab2 extends jsy.util.JsyApplication {
   def toBoolean(v: Expr): Boolean = {
     require(isValue(v))
     (v: @unchecked) match {
+      /* http://unitstep.net/blog/2009/08/11/evaluation-of-boolean-values-in-javascript/ */
       case B(b) => b
+      case null => false 
+      case Undefined => false
       case N(0) => false
-      //case N(-0) => false   //jvm has -0
-      case N(Double.NaN) => false
+      //case N(-0) => false   //jvm has -0 but this gives a warning
+      //case N(Double.NaN) => false    // didn't work properly
+      case N(n) if n.isNaN() => false
       case N(_) => true
       case S("") => false //empty string is false
-      case S(_) => true //everything else is true
-      case Undefined => false
+      case S(_) => true //everything else is true, including the string "false"
+      
     }
   }
   
   def toStr(v: Expr): String = {
     require(isValue(v))
     (v: @unchecked) match {
-      case S(s) => s
-      case N(n) => n.toString //convert number to string
-      case B(true) => "true"  //could do this or maybe .toString
-      case B(false) => "false"
+      //did the int conversion to avoid the .0 problem
+      case N(n) if n.isWhole() => val x = n.toInt; x.toString //convert number to string
+      case N(n) => n.toString
+      //case B(true) => "true"  //could do this or maybe .toString
+     // case B(false) => "false"
+      case B(b) => b.toString
       case Undefined => "undefined"
+      case S(s) => s
     }
   }
   
   def eval(env: Env, e: Expr): Expr = {
+ 
     /* Some helper functions for convenience. */
     def eToVal(e: Expr): Expr = eval(env, e)
 
@@ -121,17 +129,51 @@ object Lab2 extends jsy.util.JsyApplication {
       case Unary(_, e1) => throw new UnsupportedOperationException
       
       //binary(bop, e1, e2)
-      case Binary(Plus, e1, e2) => N(toNumber(eval(env, e1)) + toNumber(eval(env, e2)))
+      case Binary(Plus, e1, e2) => (eval(env, e1), eval(env, e2)) match {
+        case (N(e1), N(e2)) => N(e1 + e2)
+        case (S(e1), S(e2)) => S(e1 + e2) // need to handle string cases for autograder
+        case (_, S(e2)) => S(toStr(e1) + e2) 
+        case (S(e1), _) => S(e1 + toStr(e2))
+        case (_, _) => N(toNumber(eval(env,e1)) + toNumber(eval(env, e2))) // original case
+      }
+        
       case Binary(Minus, e1, e2) => N(toNumber(eval(env,e1)) - toNumber(eval(env, e2)))
       case Binary(Times, e1, e2) => N(toNumber(eval(env, e1)) * toNumber(eval(env, e2)))
       case Binary(Div, e1, e2) => N(toNumber(eval(env, e1)) / toNumber(eval(env, e2)))
       
       case Binary(Eq, e1, e2) => B(eval(env, e1) == eval(env, e2)) //equality operator when items are of the same type
       case Binary(Ne, e1, e2) => B(eval(env, e1) != eval(env, e2)) //inequality operator when items are of the same type
-      case Binary(Lt, e1, e2) => B(toNumber(eval(env, e1)) < toNumber(eval(env, e2)))  //must compare numbers
-      case Binary(Gt, e1, e2) => B(toNumber(eval(env, e1)) > toNumber(eval(env, e2))) //must compare numbers
-      case Binary(Le, e1, e2) => B(toNumber(eval(env, e1)) <= toNumber(eval(env, e2)))
-      case Binary(Ge, e1, e2) => B(toNumber(eval(env, e1)) >= toNumber(eval(env, e2)))
+     
+      case Binary(Lt, e1, e2) => (eval(env, e1), eval(env, e2)) match {
+        case (N(e1), N(e2)) => B(e1 < e2)
+        case (S(e1), S(e2)) => B(e1 < e2)
+        case (N(e1), _) => B(e1 < toNumber(eval(env, e2)))
+        case (_, N(e2)) => B(toNumber(eval(env, e1)) < e2) //need to handle this for test
+        case (_, _) => B(toNumber(eval(env, e1)) < toNumber(eval(env, e2)))
+      }
+      case Binary(Gt, e1, e2) => (eval(env, e1), eval(env, e2)) match {
+        case (N(e1), N(e2)) => B(e1 > e2)
+        case (S(e1), S(e2)) => B(e1 > e2)
+        case (N(e1), _) => B(e1 > toNumber(eval(env, e2)))
+        case (_, N(e2)) => B(toNumber(eval(env, e1)) > e2)
+        case (_, _) => B(toNumber(eval(env, e1)) > toNumber(eval(env, e2))) //must compare numbers
+      
+      }
+      case Binary(Le, e1, e2) => (eval(env, e1), eval(env, e2)) match {
+        case (N(e1), N(e2)) => B(e1 <= e2)
+        case (S(e1), S(e2)) => B(e1 <= e2)
+        case (N(e1), _) => B(e1 <= toNumber(eval(env, e2)))
+        case (_, N(e2)) => B(toNumber(eval(env, e1)) <= e2)
+        case (_,_) => B(toNumber(eval(env, e1)) <= toNumber(eval(env, e2)))
+      }
+      
+      case Binary(Ge, e1, e2) => (eval(env, e1), eval(env, e2)) match {
+        case (N(e1), N(e2)) => B(e1 >= e2)
+        case (S(e1), S(e2)) => B(e1 >= e2)
+        case (N(e1), _) => B(e1 >= toNumber(eval(env, e2)))
+        case (_, N(e2)) => B(toNumber(eval(env, e1)) >= e2)
+        case (_,_) => B(toNumber(eval(env, e1)) >= toNumber(eval(env, e2)))
+      }
       
       /*
        * the operators && and || in Javascript do not return a boolean value (true or false)
@@ -157,7 +199,15 @@ object Lab2 extends jsy.util.JsyApplication {
   }
     
   // Interface to run your interpreter starting from an empty environment.
-  def eval(e: Expr): Expr = eval(emp, e)
+  def eval(e: Expr): Expr = {
+    /*debugging */
+    /*
+    println("Expression start")
+    println(e)
+    println("Expression end")
+    */
+    eval(emp, e)
+  }
 
   // Interface to run your interpreter from a string.  This is convenient
   // for unit testing.
