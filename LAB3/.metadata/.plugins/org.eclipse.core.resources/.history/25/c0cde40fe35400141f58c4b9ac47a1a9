@@ -265,14 +265,14 @@ object Lab3 extends jsy.util.JsyApplication {
       }
       /* substitute takes: e: expr, v: expr, x: string */
       
-      case Call(v1, v2) if isValue(v1) && isValue(v2) => v1 match{
+      case Call(v1, e2) if isValue(v1) => v1 match{
     	  /* Not recursive */
         case Function(None, x, e) => {
-          substitute(e, v2, x)
+          substitute(e, e2, x)
         }
           /* Recursive */
         case Function(Some(f), x2, fbody) => {	
-          substitute(substitute(fbody, v1, f), v2, x2)
+          substitute(substitute(fbody, v1, f), e2, x2)
          }
         case _ => throw new DynamicTypeError(e)
       }
@@ -291,7 +291,7 @@ object Lab3 extends jsy.util.JsyApplication {
       
       case If(e1, e2, e3) => If(step(e1), e2, e3)
       
-      case ConstDecl(x, e1, e2) => ConstDecl(x, step(e1), e2)
+      case ConstDecl(x, e1, e2) => substitute(e2, step(e1), x)
       
       case Call(e1, e2) => (e1, e2) match {
         case (Function(_,_,_), s2) =>  Call(e1, step(s2))

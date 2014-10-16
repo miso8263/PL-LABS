@@ -212,9 +212,9 @@ object Lab3 extends jsy.util.JsyApplication {
     }
   }
     
-  def step(e: Expr): Expr = {println(e);
+  def step(e: Expr): Expr = {
     e match {
-      
+      println(e)
       /* Base Cases: Do Rules */
       case Print(v1) if isValue(v1) => println(pretty(v1)); Undefined
       
@@ -222,7 +222,7 @@ object Lab3 extends jsy.util.JsyApplication {
       /* Do Rules con't */
       case Unary(Neg, v) if isValue(v) => N(- toNumber(v))
       case Unary(Not, v) if isValue(v) => B( ! toBoolean(v))
-      case Binary(Seq, v1, e2) if isValue(v1) => v1; e2
+      case Binary(Seq, v1, e2) if isValue(v1) => v1; step(e2)
       case Binary(Plus, v1, v2) if isValue(v1) && isValue(v2) => (v1, v2) match {
         case(S(v1), _) => S(v1 + toStr(v2))
         case(_, S(v2)) => S(toStr(v1) + v2)
@@ -247,12 +247,12 @@ object Lab3 extends jsy.util.JsyApplication {
       
       case Binary(And, v1, e2) if isValue(v1) => toBoolean(v1) match{
         case true => e2
-        case _ => v1
+        case _ => B(toBoolean(v1))
       }
       
       case Binary(Or, v1, e2) if isValue(v1) => toBoolean(v1) match{
         case false => e2
-        case _ => v1
+        case _ => B(toBoolean(v1))
       }
       
       case If(v1, e2, e3) if isValue(v1) => toBoolean(v1) match{
@@ -265,14 +265,14 @@ object Lab3 extends jsy.util.JsyApplication {
       }
       /* substitute takes: e: expr, v: expr, x: string */
       
-      case Call(v1, v2) if isValue(v1) && isValue(v2) => v1 match{
+      case Call(v1, e2) if isValue(v1) => v1 match{
     	  /* Not recursive */
         case Function(None, x, e) => {
-          substitute(e, v2, x)
+          substitute(e, e2, x)
         }
           /* Recursive */
         case Function(Some(f), x2, fbody) => {	
-          substitute(substitute(fbody, v1, f), v2, x2)
+          substitute(substitute(fbody, v1, f), e2, x2)
          }
         case _ => throw new DynamicTypeError(e)
       }
@@ -291,7 +291,7 @@ object Lab3 extends jsy.util.JsyApplication {
       
       case If(e1, e2, e3) => If(step(e1), e2, e3)
       
-      case ConstDecl(x, e1, e2) => ConstDecl(x, step(e1), e2)
+      case ConstDecl(x, e1, e2) => substitute(e2, step(e1), x)
       
       case Call(e1, e2) => (e1, e2) match {
         case (Function(_,_,_), s2) =>  Call(e1, step(s2))
