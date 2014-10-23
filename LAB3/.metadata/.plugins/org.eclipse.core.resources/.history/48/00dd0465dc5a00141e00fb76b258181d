@@ -217,8 +217,7 @@ object Lab3 extends jsy.util.JsyApplication {
     }
   }
     
-  def step(e: Expr): Expr = {
-    /*println(e);*/
+  def step(e: Expr): Expr = {println(e);
     e match {
       
       /* Base Cases: Do Rules */

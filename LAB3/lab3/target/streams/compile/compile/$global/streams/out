@@ -16,17 +16,17 @@
 [0m[[0minfo[0m] [0mCompiling 1 Scala source to C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB3\lab3\target\scala-2.10\classes...[0m
 [0m[[0mdebug[0m] [0mGetting compiler-interface from component compiler for Scala 2.10.3[0m
 [0m[[0mdebug[0m] [0mGetting compiler-interface from component compiler for Scala 2.10.3[0m
-[0m[[0mdebug[0m] [0mRunning cached compiler 4b9bc91d, interfacing (CompilerInterface) with Scala compiler version 2.10.3[0m
+[0m[[0mdebug[0m] [0mRunning cached compiler 58725fe6, interfacing (CompilerInterface) with Scala compiler version 2.10.3[0m
 [0m[[0mdebug[0m] [0mCalling Scala compiler with arguments  (CompilerInterface):[0m
 [0m[[0mdebug[0m] [0m	-bootclasspath[0m
 [0m[[0mdebug[0m] [0m	C:\Program Files\Java\jre7\lib\resources.jar;C:\Program Files\Java\jre7\lib\rt.jar;C:\Program Files\Java\jre7\lib\sunrsasign.jar;C:\Program Files\Java\jre7\lib\jsse.jar;C:\Program Files\Java\jre7\lib\jce.jar;C:\Program Files\Java\jre7\lib\charsets.jar;C:\Program Files\Java\jre7\lib\jfr.jar;C:\Program Files\Java\jre7\classes;C:\Users\Michelle\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.10.3.jar[0m
 [0m[[0mdebug[0m] [0m	-classpath[0m
 [0m[[0mdebug[0m] [0m	C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB3\lab3\target\scala-2.10\classes;C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB3\lab3\lib\liblab3.jar;C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB3\lab3\lib\scalatest_2.10-2.0.jar[0m
-[0m[[33mwarn[0m] [0mC:\Users\Michelle\Documents\GitHub\PL-LABS\LAB3\lab3\src\main\scala\Lab3.scala:225: a pure expression does nothing in statement position; you may be omitting necessary parentheses[0m
+[0m[[33mwarn[0m] [0mC:\Users\Michelle\Documents\GitHub\PL-LABS\LAB3\lab3\src\main\scala\Lab3.scala:231: a pure expression does nothing in statement position; you may be omitting necessary parentheses[0m
 [0m[[33mwarn[0m] [0m      case Binary(Seq, v1, e2) if isValue(v1) => v1; e2[0m
 [0m[[33mwarn[0m] [0m                                                 ^[0m
 [0m[[33mwarn[0m] [0mone warning found[0m
-[0m[[0mdebug[0m] [0mScala compilation took 6.098060094 s[0m
+[0m[[0mdebug[0m] [0mScala compilation took 8.507487476 s[0m
 [0m[[0mdebug[0m] [0mNew invalidations:[0m
 [0m[[0mdebug[0m] [0m	Set()[0m
 [0m[[0mdebug[0m] [0mInitial set of included nodes: Set()[0m

@@ -200,7 +200,7 @@ object Lab3 extends jsy.util.JsyApplication {
     def subst(e: Expr): Expr = substitute(e, v, x)
     /* Body */
     e match {
-      case N(_) | B(_) | Undefined | S(_)=> e
+      case N(_) | B(_) | Undefined | S(_) => e
       case Print(e1) => Print(subst(e1))
       case Var(y) => if (y == x) v else Var(y)
       case Unary(uop, e1) => Unary(uop, substitute(e1, v, x))
@@ -209,16 +209,14 @@ object Lab3 extends jsy.util.JsyApplication {
       case Call(e1, e2) => Call(subst(e1), subst(e2))
       case If(e1, e2, e3) => If(subst(e1), subst(e2), subst(e3))
       case Function(p, y, fbody) => p match{
-        case Some(f) => if (x == f) e else if (x == y) e else Function(p, y, subst(fbody))
+        case Some(f) => if (x == f) e else Function(p, y, subst(fbody))
         case None => if (x == y) e else Function(p, y, subst(fbody))
       }
-      
       case _ => throw DynamicTypeError(e)
     }
   }
     
-  def step(e: Expr): Expr = {
-    /*println(e);*/
+  def step(e: Expr): Expr = {println(e);
     e match {
       
       /* Base Cases: Do Rules */
