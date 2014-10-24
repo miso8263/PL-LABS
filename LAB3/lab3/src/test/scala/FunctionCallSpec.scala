@@ -51,4 +51,17 @@ class FunctionCallSpec extends FlatSpec {
     val e3 = iterateStep(Call(e1, e2))
     assert(e3 === N(6))
   } 
+  
+ "Call" should "handle small and big step differently" in {
+    val f = "f"
+    val x = "x"
+    val r = "r"
+    val g = "g"
+    val y = "y"
+    val h = "h"
+    val plus = "plus"
+    val e1 = ConstDecl(x,N(2.0),ConstDecl(r,Binary(Plus,Call(Function(None,x,N(3.0)),N(4.0)),Var(x)),Binary(Seq,Print(Var(r)),ConstDecl(x,N(2.0),ConstDecl(g,Function(None,y,Var(x)),ConstDecl(h,Function(None,x,Call(Var(g),N(3.0))),Binary(Seq,Print(Call(Var(h),N(4.0))),ConstDecl(x,N(42.0),ConstDecl(plus,Function(None,x,Function(None,y,Binary(Plus,Var(x),Var(y)))),Print(Call(Call(Var(plus),N(3.0)),N(4.0))))))))))))
+    assert (evaluate(e1) === Undefined)
+    assert (iterateStep(e1) === Undefined)
+  } 
 }

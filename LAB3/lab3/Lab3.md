@@ -5,12 +5,19 @@ Partner: Erik Eakins
 
 ###Question 1
 #####Give one test case that behaves differently under dynamic scoping versus static scoping (and does not crash).  Explain the test case and how they behave differently in your write-up.
+This is the test case:
+```
+ConstDecl(x,N(2.0),ConstDecl(r,Binary(Plus,Call(Function(None,x,N(3.0)),N(4.0)),Var(x)),Binary(Seq,Print(Var(r)),ConstDecl(x,N(2.0),ConstDecl(g,Function(None,y,Var(x)),ConstDecl(h,Function(None,x,Call(Var(g),N(3.0))),Binary(Seq,Print(Call(Var(h),N(4.0))),ConstDecl(x,N(42.0),ConstDecl(plus,Function(None,x,Function(None,y,Binary(Plus,Var(x),Var(y)))),Print(Call(Call(Var(plus),N(3.0)),N(4.0))))))))))))
+```
+This is creating constant variables that are set to values and functions.  It is then calling the function with a parameter and printing the call of that function.  Depending on the evaluation scheme, the val will be the parameter to the function or the val declared before the function.    
 
+Big step and small step generate different outputs:
+Big Step: 5, 4, 46
+Small Step: 5, 2, 7
 
 ###Question 2
-#####Explain whether the evaluation order is deterministic as specified by the judgement form e-->e'.
-Non-deterministic implies that evaluation to a value is done any time between when the expression is created and the value is used (if it is used).  In non-deterministic evaluation, computation may be put off until the value is needed but it can be done before.  Since the judgement form takes an expression e one step to e', but not necessarily directly to a value, I would say that it is non-deterministic.  
-
+#####Explain whether the evaluation order in step is deterministic as specified by the judgement form e-->e'.
+This is deterministic, as one side of the expression (left) is stepped down to its value first.  Since there is a clear left-to-right evaluation order, this can be considered to be deterministic.  
 
 ###Question 3
 #####Consider the small-step operational semantics for JAVASCRIPTY shown in Figures 7, 8, and 9.  What is the evaluation order for e1 + e2?  Explain.  How do we change the rules to obtain the opposite evaluation order?
