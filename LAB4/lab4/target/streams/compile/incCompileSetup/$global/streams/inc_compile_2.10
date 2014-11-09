@@ -1,0 +1,345 @@
+format version: 5
+output mode:
+1 items
+0 -> single
+output directories:
+1 items
+output dir -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes
+compile options:
+0 items
+javac options:
+0 items
+compiler version:
+1 items
+0 -> 2.10.3
+compile order:
+1 items
+0 -> Mixed
+name hashing:
+1 items
+0 -> false
+products:
+87 items
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$$anonfun$1.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$$anonfun$2.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$$anonfun$3.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$$anonfun$4.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$$anonfun$5.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$$anonfun$6.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$$anonfun$freeVars$1.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$$anonfun$freeVars$2.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$$anonfun$freeVars$3.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$$anonfun$isValue$1.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$And$.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$B$.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$B.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Binary$.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Binary.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Bop.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Call$.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Call.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$ConstDecl$.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$ConstDecl.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Div$.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$DynamicTypeError$.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$DynamicTypeError.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Eq$.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Expr.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Function$.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Function.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Ge$.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$GetField$.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$GetField.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Gt$.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$If$.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$If.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Le$.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Lt$.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Minus$.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$N$.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$N.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Ne$.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Neg$.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Not$.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Obj$.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Obj.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Or$.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Plus$.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Print$.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Print.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$S$.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$S.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Seq$.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$StaticTypeError$.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$StaticTypeError.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$StuckError$.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$StuckError.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$TBool$.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$TFunction$.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$TFunction.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Times$.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$TNumber$.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$TObj$.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$TObj.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$TString$.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$TUndefined$.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Typ.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Unary$.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Unary.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Undefined$.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Uop.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Var$.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Var.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\Lab4.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\Lab4$$anonfun$1.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\Lab4.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\Lab4$$anonfun$2.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\Lab4.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\Lab4$$anonfun$compressFold$1.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\Lab4.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\Lab4$$anonfun$hasFunctionTyp$1.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\Lab4.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\Lab4$$anonfun$processFile$1.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\Lab4.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\Lab4$$anonfun$processFile$2.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\Lab4.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\Lab4$$anonfun$step$1.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\Lab4.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\Lab4$$anonfun$sum$1.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\Lab4.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\Lab4$$anonfun$treeFromList$1.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\Lab4.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\Lab4$.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\Lab4.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\Lab4$Empty$.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\Lab4.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\Lab4$Node$.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\Lab4.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\Lab4$Node.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\Lab4.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\Lab4$Tree.class
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\Lab4.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\Lab4.class
+binary dependencies:
+6 items
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Program Files\Java\jre7\lib\rt.jar
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.10.3.jar
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\lib\liblab4.jar
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\Lab4.scala -> C:\Program Files\Java\jre7\lib\rt.jar
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\Lab4.scala -> C:\Users\Michelle\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.10.3.jar
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\Lab4.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\lib\liblab4.jar
+direct source dependencies:
+1 items
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\Lab4.scala -> C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala
+direct external dependencies:
+0 items
+public inherited source dependencies:
+0 items
+public inherited external dependencies:
+0 items
+member reference internal dependencies:
+0 items
+member reference external dependencies:
+0 items
+inheritance internal dependencies:
+0 items
+inheritance external dependencies:
+0 items
+class names:
+87 items
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$$anonfun$1
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$$anonfun$2
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$$anonfun$3
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$$anonfun$4
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$$anonfun$5
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$$anonfun$6
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$$anonfun$freeVars$1
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$$anonfun$freeVars$2
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$$anonfun$freeVars$3
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$$anonfun$isValue$1
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$And$
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$B
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$B$
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$Binary
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$Binary$
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$Bop
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$Call
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$Call$
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$ConstDecl
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$ConstDecl$
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$Div$
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$DynamicTypeError
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$DynamicTypeError$
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$Eq$
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$Expr
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$Function
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$Function$
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$Ge$
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$GetField
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$GetField$
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$Gt$
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$If
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$If$
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$Le$
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$Lt$
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$Minus$
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$N
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$N$
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$Ne$
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$Neg$
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$Not$
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$Obj
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$Obj$
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$Or$
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$Plus$
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$Print
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$Print$
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$S
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$S$
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$Seq$
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$StaticTypeError
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$StaticTypeError$
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$StuckError
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$StuckError$
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$TBool$
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$TFunction
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$TFunction$
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$TNumber$
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$TObj
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$TObj$
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$TString$
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$TUndefined$
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$Times$
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$Typ
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$Unary
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$Unary$
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$Undefined$
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$Uop
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$Var
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> jsy.lab4.ast$Var$
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\Lab4.scala -> Lab4
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\Lab4.scala -> Lab4$
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\Lab4.scala -> Lab4$$anonfun$1
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\Lab4.scala -> Lab4$$anonfun$2
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\Lab4.scala -> Lab4$$anonfun$compressFold$1
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\Lab4.scala -> Lab4$$anonfun$hasFunctionTyp$1
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\Lab4.scala -> Lab4$$anonfun$processFile$1
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\Lab4.scala -> Lab4$$anonfun$processFile$2
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\Lab4.scala -> Lab4$$anonfun$step$1
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\Lab4.scala -> Lab4$$anonfun$sum$1
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\Lab4.scala -> Lab4$$anonfun$treeFromList$1
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\Lab4.scala -> Lab4$Empty$
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\Lab4.scala -> Lab4$Node
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\Lab4.scala -> Lab4$Node$
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\Lab4.scala -> Lab4$Tree
+used names:
+0 items
+product stamps:
+87 items
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$$anonfun$1.class -> lastModified(1415310806237)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$$anonfun$2.class -> lastModified(1415310806239)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$$anonfun$3.class -> lastModified(1415310806243)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$$anonfun$4.class -> lastModified(1415310806245)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$$anonfun$5.class -> lastModified(1415310806248)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$$anonfun$6.class -> lastModified(1415310806251)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$$anonfun$freeVars$1.class -> lastModified(1415310806254)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$$anonfun$freeVars$2.class -> lastModified(1415310806259)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$$anonfun$freeVars$3.class -> lastModified(1415310806263)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$$anonfun$isValue$1.class -> lastModified(1415310806268)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$.class -> lastModified(1415310806233)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$And$.class -> lastModified(1415310806273)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$B$.class -> lastModified(1415310806285)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$B.class -> lastModified(1415310806280)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Binary$.class -> lastModified(1415310806299)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Binary.class -> lastModified(1415310806295)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Bop.class -> lastModified(1415310806300)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Call$.class -> lastModified(1415310806304)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Call.class -> lastModified(1415310806310)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$ConstDecl$.class -> lastModified(1415310806320)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$ConstDecl.class -> lastModified(1415310806317)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Div$.class -> lastModified(1415310806323)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$DynamicTypeError$.class -> lastModified(1415310806326)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$DynamicTypeError.class -> lastModified(1415310806333)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Eq$.class -> lastModified(1415310806337)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Expr.class -> lastModified(1415310806339)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Function$.class -> lastModified(1415310806352)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Function.class -> lastModified(1415310806348)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Ge$.class -> lastModified(1415310806355)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$GetField$.class -> lastModified(1415310806358)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$GetField.class -> lastModified(1415310806363)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Gt$.class -> lastModified(1415310806366)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$If$.class -> lastModified(1415310806369)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$If.class -> lastModified(1415310806375)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Le$.class -> lastModified(1415310806378)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Lt$.class -> lastModified(1415310806383)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Minus$.class -> lastModified(1415310806386)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$N$.class -> lastModified(1415310806393)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$N.class -> lastModified(1415310806391)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Ne$.class -> lastModified(1415310806396)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Neg$.class -> lastModified(1415310806399)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Not$.class -> lastModified(1415310806402)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Obj$.class -> lastModified(1415310806410)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Obj.class -> lastModified(1415310806407)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Or$.class -> lastModified(1415310806412)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Plus$.class -> lastModified(1415310806415)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Print$.class -> lastModified(1415310806422)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Print.class -> lastModified(1415310806420)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$S$.class -> lastModified(1415310806425)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$S.class -> lastModified(1415310806432)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Seq$.class -> lastModified(1415310806436)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$StaticTypeError$.class -> lastModified(1415310806439)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$StaticTypeError.class -> lastModified(1415310806445)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$StuckError$.class -> lastModified(1415310806453)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$StuckError.class -> lastModified(1415310806450)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$TBool$.class -> lastModified(1415310806455)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$TFunction$.class -> lastModified(1415310806458)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$TFunction.class -> lastModified(1415310806464)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Times$.class -> lastModified(1415310806503)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$TNumber$.class -> lastModified(1415310806467)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$TObj$.class -> lastModified(1415310806475)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$TObj.class -> lastModified(1415310806472)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$TString$.class -> lastModified(1415310806477)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$TUndefined$.class -> lastModified(1415310806480)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Typ.class -> lastModified(1415310806505)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Unary$.class -> lastModified(1415310806508)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Unary.class -> lastModified(1415310806513)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Undefined$.class -> lastModified(1415310806516)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Uop.class -> lastModified(1415310806517)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Var$.class -> lastModified(1415310806524)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast$Var.class -> lastModified(1415310806522)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\jsy\lab4\ast.class -> lastModified(1415310806213)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\Lab4$$anonfun$1.class -> lastModified(1415310806151)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\Lab4$$anonfun$2.class -> lastModified(1415310806154)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\Lab4$$anonfun$compressFold$1.class -> lastModified(1415310806157)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\Lab4$$anonfun$hasFunctionTyp$1.class -> lastModified(1415310806160)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\Lab4$$anonfun$processFile$1.class -> lastModified(1415310806162)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\Lab4$$anonfun$processFile$2.class -> lastModified(1415310806166)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\Lab4$$anonfun$step$1.class -> lastModified(1415310806168)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\Lab4$$anonfun$sum$1.class -> lastModified(1415310806170)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\Lab4$$anonfun$treeFromList$1.class -> lastModified(1415310806173)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\Lab4$.class -> lastModified(1415310806144)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\Lab4$Empty$.class -> lastModified(1415310806176)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\Lab4$Node$.class -> lastModified(1415310806180)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\Lab4$Node.class -> lastModified(1415310806189)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\Lab4$Tree.class -> lastModified(1415310806195)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\target\scala-2.10\classes\Lab4.class -> lastModified(1415310806012)
+source stamps:
+2 items
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> hash(4b893a43bea91ad29a3bb119e3f5fb58993e8283)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\Lab4.scala -> hash(9cd3be07304406890ec6f4048ce3c8754e669539)
+binary stamps:
+3 items
+C:\Program Files\Java\jre7\lib\rt.jar -> lastModified(1410038957512)
+C:\Users\Michelle\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.10.3.jar -> lastModified(1380275091000)
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\lib\liblab4.jar -> lastModified(1415310593000)
+class names:
+3 items
+C:\Program Files\Java\jre7\lib\rt.jar -> java.lang.Throwable
+C:\Users\Michelle\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.10.3.jar -> scala.runtime.AbstractFunction2
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\lib\liblab4.jar -> jsy.lab4.Parser$
+internal apis:
+2 items
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlFlpwRASfbtoCAAZJAAdhcGlIYXNoWgAIaGFzTWFjcm9MABhfaW50ZXJuYWxPbmx5X25hbWVIYXNoZXN0ACRMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2hlcztMAANhcGl0ABVMeHNidGkvYXBpL1NvdXJjZUFQSTtMAAtjb21waWxhdGlvbnQAF0x4c2J0aS9hcGkvQ29tcGlsYXRpb247WwAEaGFzaHQAAltCeHD8QCGnAHNyACJ4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaGVzVNq+mfrU7EwCAAJbAA9pbXBsaWNpdE1lbWJlcnN0ACNbTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoO1sADnJlZ3VsYXJNZW1iZXJzcQB+AAd4cHVyACNbTHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoO0lagLbdlov0AgAAeHAAAAAAdXEAfgAJAAAAAHNyABN4c2J0aS5hcGkuU291cmNlQVBJuV6n+SkjOKQCAAJbAAtkZWZpbml0aW9uc3QAF1tMeHNidGkvYXBpL0RlZmluaXRpb247WwAIcGFja2FnZXN0ABRbTHhzYnRpL2FwaS9QYWNrYWdlO3hwdXIAF1tMeHNidGkuYXBpLkRlZmluaXRpb247iMlc57TjXg4CAAB4cAAAAAFzcgATeHNidGkuYXBpLkNsYXNzTGlrZYM0HKHfsJdsAgAETAAOZGVmaW5pdGlvblR5cGV0ABpMeHNidGkvYXBpL0RlZmluaXRpb25UeXBlO1sAEHNhdmVkQW5ub3RhdGlvbnN0ABNbTGphdmEvbGFuZy9TdHJpbmc7TAAIc2VsZlR5cGV0ABBMeHNidGkvYXBpL0xhenk7TAAJc3RydWN0dXJlcQB+ABV4cgAheHNidGkuYXBpLlBhcmFtZXRlcml6ZWREZWZpbml0aW9u+RFusdVQPOICAAFbAA50eXBlUGFyYW1ldGVyc3QAGltMeHNidGkvYXBpL1R5cGVQYXJhbWV0ZXI7eHIAFHhzYnRpLmFwaS5EZWZpbml0aW9uhyob6HFC40YCAARMAAZhY2Nlc3N0ABJMeHNidGkvYXBpL0FjY2VzcztbAAthbm5vdGF0aW9uc3QAF1tMeHNidGkvYXBpL0Fubm90YXRpb247TAAJbW9kaWZpZXJzdAAVTHhzYnRpL2FwaS9Nb2RpZmllcnM7TAAEbmFtZXQAEkxqYXZhL2xhbmcvU3RyaW5nO3hwc3IAEHhzYnRpLmFwaS5QdWJsaWO6WD2ubC1gQgIAAHhyABB4c2J0aS5hcGkuQWNjZXNz3WKa+B1jMUgCAAB4cHVyABdbTHhzYnRpLmFwaS5Bbm5vdGF0aW9uO+uX6xkQ9o1IAgAAeHAAAAAAc3IAE3hzYnRpLmFwaS5Nb2RpZmllcnPHERMhaZzcJAIAAUIABWZsYWdzeHAAdAAManN5LmxhYjQuYXN0dXIAGltMeHNidGkuYXBpLlR5cGVQYXJhbWV0ZXI72W0mDyid8rYCAAB4cAAAAAB+cgAYeHNidGkuYXBpLkRlZmluaXRpb25UeXBlAAAAAAAAAAASAAB4cgAOamF2YS5sYW5nLkVudW0AAAAAAAAAABIAAHhwdAAGTW9kdWxldXIAE1tMamF2YS5sYW5nLlN0cmluZzut0lbn6R17RwIAAHhwAAAAAHNyABN4c2J0aS5TYWZlTGF6eSRJbXBsUAIuk5eXQD8CAANaAAhiaXRtYXAkMEwAAl90dAASTGphdmEvbGFuZy9PYmplY3Q7TAAEZXZhbHQAEUxzY2FsYS9GdW5jdGlvbjA7eHIAFnhzYnRpLmFwaS5BYnN0cmFjdExhennTd7UBX7vnoAIAAHhwAHBzcgAgeHNidGkuU2FmZUxhenkkJGFub25mdW4kc3RyaWN0JDEAAAAAAAAAAAIAAUwAB3ZhbHVlJDFxAH4AL3hwc3IAE3hzYnRpLmFwaS5FbXB0eVR5cGW8/Z5GSTuJJAIAAHhyABR4c2J0aS5hcGkuU2ltcGxlVHlwZXJ4YoghI79AAgAAeHIADnhzYnRpLmFwaS5UeXBlP2rZIRZJqsoCAAB4cHNxAH4ALgBwc3EAfgAzc3IAE3hzYnRpLmFwaS5TdHJ1Y3R1cmWpqvmAk2/YAAIAA0wACGRlY2xhcmVkcQB+ABVMAAlpbmhlcml0ZWRxAH4AFUwAB3BhcmVudHNxAH4AFXhxAH4AN3NxAH4ALgBwc3EAfgAzdXEAfgAQAAAAAHNxAH4ALgBwc3EAfgAzdXEAfgAQAAAAAHNxAH4ALgBwc3EAfgAzdXIAEVtMeHNidGkuYXBpLlR5cGU7dP+lWnv56UECAAB4cAAAAAJzcgAUeHNidGkuYXBpLlByb2plY3Rpb27z0o1U6UWkLQIAAkwAAmlkcQB+ABxMAAZwcmVmaXh0ABZMeHNidGkvYXBpL1NpbXBsZVR5cGU7eHEAfgA2dAAGT2JqZWN0c3IAE3hzYnRpLmFwaS5TaW5nbGV0b278p1/4z1bkRgIAAUwABHBhdGh0ABBMeHNidGkvYXBpL1BhdGg7eHEAfgA2c3IADnhzYnRpLmFwaS5QYXRomz1cCM6lJ4QCAAFbAApjb21wb25lbnRzdAAaW0x4c2J0aS9hcGkvUGF0aENvbXBvbmVudDt4cHVyABpbTHhzYnRpLmFwaS5QYXRoQ29tcG9uZW50O0PaCXQtZxZ0AgAAeHAAAAADc3IADHhzYnRpLmFwaS5JZJgybIs3U8RAAgABTAACaWRxAH4AHHhyABd4c2J0aS5hcGkuUGF0aENvbXBvbmVudF+aIlsuhp+8AgAAeHB0AARqYXZhc3EAfgBTdAAEbGFuZ3NyAA54c2J0aS5hcGkuVGhpc9sJ7abMWkBcAgAAeHEAfgBUc3EAfgBHdAADQW55c3EAfgBLc3EAfgBOdXEAfgBRAAAAAnNxAH4AU3QABXNjYWxhcQB+AFp1cgAUW0x4c2J0aS5hcGkuUGFja2FnZTtbExk3cKcnoQIAAHhwAAAAAnNyABF4c2J0aS5hcGkuUGFja2FnZX5Zj/auzjlYAgABTAAEbmFtZXEAfgAceHB0AAhqc3kubGFiNHNxAH4AZHQAA2pzeXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABSYcYwRt1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5cQB+ABxMAA9zb3VyY2VEaXJlY3RvcnlxAH4AHHhwdABOQzpcVXNlcnNcTWljaGVsbGVcRG9jdW1lbnRzXEdpdEh1YlxQTC1MQUJTXExBQjRcbGFiNFx0YXJnZXRcc2NhbGEtMi4xMFxjbGFzc2VzdAABL3VyAAJbQqzzF/gGCFTgAgAAeHAAAAAUS4k6Q76pGtKaO7EZ4/X7WJk+goM=
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\Lab4.scala -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlFlpwRASfbtoCAAZJAAdhcGlIYXNoWgAIaGFzTWFjcm9MABhfaW50ZXJuYWxPbmx5X25hbWVIYXNoZXN0ACRMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2hlcztMAANhcGl0ABVMeHNidGkvYXBpL1NvdXJjZUFQSTtMAAtjb21waWxhdGlvbnQAF0x4c2J0aS9hcGkvQ29tcGlsYXRpb247WwAEaGFzaHQAAltCeHDUaSUYAHNyACJ4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaGVzVNq+mfrU7EwCAAJbAA9pbXBsaWNpdE1lbWJlcnN0ACNbTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoO1sADnJlZ3VsYXJNZW1iZXJzcQB+AAd4cHVyACNbTHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoO0lagLbdlov0AgAAeHAAAAAAdXEAfgAJAAAAAHNyABN4c2J0aS5hcGkuU291cmNlQVBJuV6n+SkjOKQCAAJbAAtkZWZpbml0aW9uc3QAF1tMeHNidGkvYXBpL0RlZmluaXRpb247WwAIcGFja2FnZXN0ABRbTHhzYnRpL2FwaS9QYWNrYWdlO3hwdXIAF1tMeHNidGkuYXBpLkRlZmluaXRpb247iMlc57TjXg4CAAB4cAAAAAFzcgATeHNidGkuYXBpLkNsYXNzTGlrZYM0HKHfsJdsAgAETAAOZGVmaW5pdGlvblR5cGV0ABpMeHNidGkvYXBpL0RlZmluaXRpb25UeXBlO1sAEHNhdmVkQW5ub3RhdGlvbnN0ABNbTGphdmEvbGFuZy9TdHJpbmc7TAAIc2VsZlR5cGV0ABBMeHNidGkvYXBpL0xhenk7TAAJc3RydWN0dXJlcQB+ABV4cgAheHNidGkuYXBpLlBhcmFtZXRlcml6ZWREZWZpbml0aW9u+RFusdVQPOICAAFbAA50eXBlUGFyYW1ldGVyc3QAGltMeHNidGkvYXBpL1R5cGVQYXJhbWV0ZXI7eHIAFHhzYnRpLmFwaS5EZWZpbml0aW9uhyob6HFC40YCAARMAAZhY2Nlc3N0ABJMeHNidGkvYXBpL0FjY2VzcztbAAthbm5vdGF0aW9uc3QAF1tMeHNidGkvYXBpL0Fubm90YXRpb247TAAJbW9kaWZpZXJzdAAVTHhzYnRpL2FwaS9Nb2RpZmllcnM7TAAEbmFtZXQAEkxqYXZhL2xhbmcvU3RyaW5nO3hwc3IAEHhzYnRpLmFwaS5QdWJsaWO6WD2ubC1gQgIAAHhyABB4c2J0aS5hcGkuQWNjZXNz3WKa+B1jMUgCAAB4cHVyABdbTHhzYnRpLmFwaS5Bbm5vdGF0aW9uO+uX6xkQ9o1IAgAAeHAAAAAAc3IAE3hzYnRpLmFwaS5Nb2RpZmllcnPHERMhaZzcJAIAAUIABWZsYWdzeHAAdAAETGFiNHVyABpbTHhzYnRpLmFwaS5UeXBlUGFyYW1ldGVyO9ltJg8onfK2AgAAeHAAAAAAfnIAGHhzYnRpLmFwaS5EZWZpbml0aW9uVHlwZQAAAAAAAAAAEgAAeHIADmphdmEubGFuZy5FbnVtAAAAAAAAAAASAAB4cHQABk1vZHVsZXVyABNbTGphdmEubGFuZy5TdHJpbmc7rdJW5+kde0cCAAB4cAAAAABzcgATeHNidGkuU2FmZUxhenkkSW1wbFACLpOXl0A/AgADWgAIYml0bWFwJDBMAAJfdHQAEkxqYXZhL2xhbmcvT2JqZWN0O0wABGV2YWx0ABFMc2NhbGEvRnVuY3Rpb24wO3hyABZ4c2J0aS5hcGkuQWJzdHJhY3RMYXp503e1AV+756ACAAB4cABwc3IAIHhzYnRpLlNhZmVMYXp5JCRhbm9uZnVuJHN0cmljdCQxAAAAAAAAAAACAAFMAAd2YWx1ZSQxcQB+AC94cHNyABN4c2J0aS5hcGkuRW1wdHlUeXBlvP2eRkk7iSQCAAB4cgAUeHNidGkuYXBpLlNpbXBsZVR5cGVyeGKIISO/QAIAAHhyAA54c2J0aS5hcGkuVHlwZT9q2SEWSarKAgAAeHBzcQB+AC4AcHNxAH4AM3NyABN4c2J0aS5hcGkuU3RydWN0dXJlqar5gJNv2AACAANMAAhkZWNsYXJlZHEAfgAVTAAJaW5oZXJpdGVkcQB+ABVMAAdwYXJlbnRzcQB+ABV4cQB+ADdzcQB+AC4AcHNxAH4AM3VxAH4AEAAAAABzcQB+AC4AcHNxAH4AM3VxAH4AEAAAAAFzcgANeHNidGkuYXBpLkRlZlK+n+J8tDZpAgACTAAKcmV0dXJuVHlwZXQAEEx4c2J0aS9hcGkvVHlwZTtbAA92YWx1ZVBhcmFtZXRlcnN0ABpbTHhzYnRpL2FwaS9QYXJhbWV0ZXJMaXN0O3hxAH4AFnEAfgAgdXEAfgAhAAAAAHNxAH4AIwB0AARtYWludXEAfgAmAAAAAHNyABR4c2J0aS5hcGkuUHJvamVjdGlvbvPSjVTpRaQtAgACTAACaWRxAH4AHEwABnByZWZpeHQAFkx4c2J0aS9hcGkvU2ltcGxlVHlwZTt4cQB+ADZ0AARVbml0c3IAE3hzYnRpLmFwaS5TaW5nbGV0b278p1/4z1bkRgIAAUwABHBhdGh0ABBMeHNidGkvYXBpL1BhdGg7eHEAfgA2c3IADnhzYnRpLmFwaS5QYXRomz1cCM6lJ4QCAAFbAApjb21wb25lbnRzdAAaW0x4c2J0aS9hcGkvUGF0aENvbXBvbmVudDt4cHVyABpbTHhzYnRpLmFwaS5QYXRoQ29tcG9uZW50O0PaCXQtZxZ0AgAAeHAAAAACc3IADHhzYnRpLmFwaS5JZJgybIs3U8RAAgABTAACaWRxAH4AHHhyABd4c2J0aS5hcGkuUGF0aENvbXBvbmVudF+aIlsuhp+8AgAAeHB0AAVzY2FsYXNyAA54c2J0aS5hcGkuVGhpc9sJ7abMWkBcAgAAeHEAfgBYdXIAGltMeHNidGkuYXBpLlBhcmFtZXRlckxpc3Q79dM6HfKzcO4CAAB4cAAAAAFzcgAXeHNidGkuYXBpLlBhcmFtZXRlckxpc3TWxbwcZEl04wIAAloACmlzSW1wbGljaXRbAApwYXJhbWV0ZXJzdAAcW0x4c2J0aS9hcGkvTWV0aG9kUGFyYW1ldGVyO3hwAHVyABxbTHhzYnRpLmFwaS5NZXRob2RQYXJhbWV0ZXI7z7jFXaXdtW0CAAB4cAAAAAFzcgAZeHNidGkuYXBpLk1ldGhvZFBhcmFtZXRlch9FrhfTSbDqAgAEWgAKaGFzRGVmYXVsdEwACG1vZGlmaWVydAAdTHhzYnRpL2FwaS9QYXJhbWV0ZXJNb2RpZmllcjtMAARuYW1lcQB+ABxMAAN0cGVxAH4ARHhwAH5yABt4c2J0aS5hcGkuUGFyYW1ldGVyTW9kaWZpZXIAAAAAAAAAABIAAHhxAH4AKXQABVBsYWludAAEYXJnc3NyABd4c2J0aS5hcGkuUGFyYW1ldGVyaXplZBZs7mkDybt/AgACTAAIYmFzZVR5cGVxAH4ATFsADXR5cGVBcmd1bWVudHN0ABFbTHhzYnRpL2FwaS9UeXBlO3hxAH4ANnNxAH4AS3QABUFycmF5cQB+AFF1cgARW0x4c2J0aS5hcGkuVHlwZTt0/6Vae/npQQIAAHhwAAAAAXNxAH4AS3QABlN0cmluZ3NxAH4AT3NxAH4AUnVxAH4AVQAAAANzcQB+AFd0AARqYXZhc3EAfgBXdAAEbGFuZ3EAfgBcc3EAfgAuAHBzcQB+ADN1cQB+AHAAAAADc3EAfgBLdAAOSnN5QXBwbGljYXRpb25zcQB+AE9zcQB+AFJ1cQB+AFUAAAADc3EAfgBXdAADanN5c3EAfgBXdAAEdXRpbHEAfgBcc3EAfgBLdAAGT2JqZWN0cQB+AHRzcQB+AEt0AANBbnlxAH4AUXVyABRbTHhzYnRpLmFwaS5QYWNrYWdlO1sTGTdwpyehAgAAeHAAAAAAc3IAFXhzYnRpLmFwaS5Db21waWxhdGlvbu364MNq6KBCAgACSgAJc3RhcnRUaW1lWwAHb3V0cHV0c3QAGltMeHNidGkvYXBpL091dHB1dFNldHRpbmc7eHAAAAFJhxjBG3VyABpbTHhzYnRpLmFwaS5PdXRwdXRTZXR0aW5nO39qwvOnh6VCAgAAeHAAAAABc3IAF3hzYnRpLmFwaS5PdXRwdXRTZXR0aW5netmaR3T7HXsCAAJMAA9vdXRwdXREaXJlY3RvcnlxAH4AHEwAD3NvdXJjZURpcmVjdG9yeXEAfgAceHB0AE5DOlxVc2Vyc1xNaWNoZWxsZVxEb2N1bWVudHNcR2l0SHViXFBMLUxBQlNcTEFCNFxsYWI0XHRhcmdldFxzY2FsYS0yLjEwXGNsYXNzZXN0AAEvdXIAAltCrPMX+AYIVOACAAB4cAAAABSc074HMEQGiQ7G9ASM48h1TmaVOQ==
+external apis:
+0 items
+source infos:
+2 items
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\jsy\lab4\ast.scala -> 
+AAAAAAAAAAA=
+C:\Users\Michelle\Documents\GitHub\PL-LABS\LAB4\lab4\src\main\scala\Lab4.scala -> 
+AAAAAAAAAAA=
+compilations:
+1 items
+0 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABSYcYwRt1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQATkM6XFVzZXJzXE1pY2hlbGxlXERvY3VtZW50c1xHaXRIdWJcUEwtTEFCU1xMQUI0XGxhYjRcdGFyZ2V0XHNjYWxhLTIuMTBcY2xhc3Nlc3QAAS8=
