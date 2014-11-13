@@ -4,10 +4,10 @@ object Lab4 extends jsy.util.JsyApplication {
   
   /*
    * CSCI 3155: Lab 4
-   * <Your Name>
+   * Michelle Soult
    * 
-   * Partner: <Your Partner's Name>
-   * Collaborators: <Any Collaborators>
+   * Partner: Erik Eakins
+   * Collaborators: Catherine Dewerd, Olivia Abrant, Jessica Lynch, Kahini, Alok
    */
 
   /*
@@ -53,9 +53,13 @@ object Lab4 extends jsy.util.JsyApplication {
     }
   }
   
+  /* v */
   def mapFirst[A](f: A => Option[A])(l: List[A]): List[A] = l match {
-    case Nil => throw new UnsupportedOperationException
-    case h :: t => throw new UnsupportedOperationException
+    case Nil => l
+    case h :: t => f(h) match{
+      case None => h::mapFirst(f)(t)
+      case Some(h1) => h1::t
+    }
   }
   
   /* Search Trees */
@@ -68,8 +72,8 @@ object Lab4 extends jsy.util.JsyApplication {
     
     def foldLeft[A](z: A)(f: (A, Int) => A): A = {
       def loop(acc: A, t: Tree): A = t match {
-        case Empty => throw new UnsupportedOperationException
-        case Node(l, d, r) => throw new UnsupportedOperationException
+        case Empty => acc
+        case Node(l, d, r) => loop(f(loop(acc, l), d), r) //in order traversal
       }
       loop(z, this)
     }
@@ -94,7 +98,10 @@ object Lab4 extends jsy.util.JsyApplication {
   
   def strictlyOrdered(t: Tree): Boolean = {
     val (b, _) = t.foldLeft((true, None: Option[Int])){
-      throw new UnsupportedOperationException
+      (acc, y) => acc match{
+        case (b1, None) => (b1, Some(y))
+        case (b1, Some(x)) => if (x < y) (b1 && true, Some(x)) else (false, Some(x))
+      }
     }
     b
   }
@@ -128,33 +135,59 @@ object Lab4 extends jsy.util.JsyApplication {
         case TNumber => TNumber
         case tgot => err(tgot, e1)
       }
-      case Unary(Not, e1) =>
-        throw new UnsupportedOperationException
-      case Binary(Plus, e1, e2) =>
-        throw new UnsupportedOperationException
-      case Binary(Minus|Times|Div, e1, e2) => 
-        throw new UnsupportedOperationException
-      case Binary(Eq|Ne, e1, e2) =>
-        throw new UnsupportedOperationException
+      case Unary(Not, e1) => if (typ(e1) != TBool) err(typ(e1), e1) else TBool
+      case Binary(Plus, e1, e2) => typ(e1) match{
+        case TNumber => if (typ(e2) == TNumber) TNumber else err(typ(e2), e2)
+        case TString => if (typ(e2) == TString) TString else err(typ(e2), e2)
+        case _ => err(typ(e1), e1)
+      }
+      case Binary(Minus|Times|Div, e1, e2) => typ(e1) match{
+        case TNumber => if (typ(e2) == TNumber) TNumber else err(typ(e2), e2)
+        case _ => err(typ(e1), e1)
+      }
+      case Binary(Eq|Ne, e1, e2) => typ(e1) match{
         /*
-         * there is a helper function called hasFunctionType
          * if has function type => type error
          * else => bool, etc.
          * eval and then check return type
          */
-      case Binary(Lt|Le|Gt|Ge, e1, e2) =>
-        throw new UnsupportedOperationException
+        case TFunction(_, _) => err(typ(e1), e1)
+        case TObj(_) => err(typ(e1), e1)
+        case TUndefined => err(typ(e1), e1)
+        case _ => typ(e2) match{
+           case TFunction(_, _) => err(typ(e2), e2)
+           case TObj(_) => err(typ(e2), e2)
+           case TUndefined => err(typ(e2), e2)
+           /* everything else is fine */
+           case _ => TBool
+        }
+      }
+        
+      case Binary(Lt|Le|Gt|Ge, e1, e2) => (typ(e1), typ(e2)) match{
         /*
          * (number, number) => bool
          * (string, string) => bool
          * _ => type Error
          */
-      case Binary(And|Or, e1, e2) =>
-        throw new UnsupportedOperationException
-      case Binary(Seq, e1, e2) =>
-        throw new UnsupportedOperationException
-      case If(e1, e2, e3) =>
-        throw new UnsupportedOperationException
+        case (TNumber, TNumber) => TBool
+        case (TNumber, _) => err(typ(e2), e2)
+        case (TString, TString) => TBool
+        case (TString, _) => err(typ(e2), e2)
+        case _ => err(typ(e1), e1)
+      }
+      case Binary(And|Or, e1, e2) => typ(e1) match{
+        case TBool => typ(e2) match{
+          case TBool => TBool
+          case _ => err(typ(e2), e2)
+        }
+        case _ => err(typ(e1), e1)
+      }
+      case Binary(Seq, e1, e2) => typ(e1); typ(e2)
+      case If(e1, e2, e3) => typ(e1) match{
+        /* they have to be the same type? */
+        case TBool => if (typ(e2) == typ(e3)) typ(e2) else err(typ(e3), e3)
+        case _ => err(typ(e1), e1)
+      }
       case Function(p, params, tann, e1) => {
         // Bind to env1 an environment that extends env with an appropriate binding if
         // the function is potentially recursive.
@@ -166,26 +199,32 @@ object Lab4 extends jsy.util.JsyApplication {
           case _ => err(TUndefined, e1)
         }
         // Bind to env2 an environment that extends env1 with bindings for params.
-        val env2 = throw new UnsupportedOperationException
+        val env2 = env1 ++ params
         // Match on whether the return type is specified.
         tann match {
-          case None => throw new UnsupportedOperationException
-          case Some(tret) => throw new UnsupportedOperationException
+          case None => TFunction(params, typeInfer(env2, e1))
+          case Some(tret) => if (tret == typeInfer(env2, e1)) TFunction(params, typeInfer(env2, e1)) else err(typeInfer(env2, e1), e1)
+          case _ => err(TUndefined, e1)
         }
       }
       case Call(e1, args) => typ(e1) match {
         case TFunction(params, tret) if (params.length == args.length) => {
+          /* use zipped to match formal parameters and actual arguments */
           (params, args).zipped.foreach {
-            throw new UnsupportedOperationException
+            (paramX, argsY) => (paramX, argsY) match
+            {
+              case ((str, tp), ta) => if (tp != typ(ta)) err(tp, ta)
+            }
           };
           tret
         }
         case tgot => err(tgot, e1)
       }
-      case Obj(fields) =>
-        throw new UnsupportedOperationException
-      case GetField(e1, f) =>
-        throw new UnsupportedOperationException
+      case Obj(fields) => TObj(fields.map{case (a,b) => (a, typ(b))})
+      case GetField(e1, f) => typ(e1) match{
+        case TObj(fields) => if (fields.contains(f)) fields(f) else err(TObj(fields), e1)
+        case _ => err(typ(e1), e1)
+      }
     }
   }
   
@@ -212,7 +251,7 @@ object Lab4 extends jsy.util.JsyApplication {
     }
   }
   
-  def substitute(e: Expr, v: Expr, x: String): Expr = {
+  def substitute(e: Expr, v: Expr, x: String): Expr = {println(e)
     require(isValue(v))
     
     def subst(e: Expr): Expr = substitute(e, v, x)
@@ -226,13 +265,13 @@ object Lab4 extends jsy.util.JsyApplication {
       case Var(y) => if (x == y) v else e
       case ConstDecl(y, e1, e2) => ConstDecl(y, subst(e1), if (x == y) e2 else subst(e2))
       case Function(p, params, tann, e1) =>
-        throw new UnsupportedOperationException
+        Function(p, params, tann, subst(e1))
       case Call(e1, args) =>
-        throw new UnsupportedOperationException
+        Call(subst(e1), args)
       case Obj(fields) =>
         throw new UnsupportedOperationException
       case GetField(e1, f) =>
-        throw new UnsupportedOperationException
+        GetField(subst(e1), f)
     }
   }
   
@@ -249,11 +288,20 @@ object Lab4 extends jsy.util.JsyApplication {
       case Binary(Seq, v1, e2) if isValue(v1) => e2
       case Binary(Plus, S(s1), S(s2)) => S(s1 + s2)
       case Binary(Plus, N(n1), N(n2)) => N(n1 + n2)
+      /* add DoMinus, DoTimes, DoDiv */
+      case Binary(Minus, N(n1), N(n2)) => N(n1 - n2)
+      case Binary(Times, N(n1), N(n2)) => N(n1*n2)
+      case Binary(Div, N(n1), N(n2)) => N(n1/n2)
+      
       case Binary(bop @ (Lt|Le|Gt|Ge), v1, v2) if isValue(v1) && isValue(v2) => B(inequalityVal(bop, v1, v2))
       case Binary(Eq, v1, v2) if isValue(v1) && isValue(v2) => B(v1 == v2)
       case Binary(Ne, v1, v2) if isValue(v1) && isValue(v2) => B(v1 != v2)
       case Binary(And, B(b1), e2) => if (b1) e2 else B(false)
       case Binary(Or, B(b1), e2) => if (b1) B(true) else e2
+      
+      /* DoIf cases */
+      case If(B(e1), e2, e3) => if (e1) e2 else e3
+      
       case ConstDecl(x, v1, e2) if isValue(v1) => substitute(e2, v1, x)
       case Call(v1, args) if isValue(v1) && (args forall isValue) =>
         v1 match {
@@ -268,7 +316,8 @@ object Lab4 extends jsy.util.JsyApplication {
           }
           case _ => throw new StuckError(e)
         }
-      /*** Fill-in more cases here. ***/
+      /* DoGetField */
+      case GetField(v1, f) if isValue(v1) => throw new UnsupportedOperationException
         
       /* Inductive Cases: Search Rules */
       case Print(e1) => Print(step(e1))
@@ -279,6 +328,25 @@ object Lab4 extends jsy.util.JsyApplication {
       case ConstDecl(x, e1, e2) => ConstDecl(x, step(e1), e2)
       /*** Fill-in more cases here. ***/
       
+      /* Search Call1 & Search Call2 */
+      //case Call(e1, args) => Call(step(e1), args) //might be missing the second case here
+      /* Search Object */
+      /*
+       * can take a step by stepping on any of its component fields
+       * make the step go on the first non-value as given by left-to-right iteraction of the collection
+       * using Map.find
+       */
+      /*
+      case Obj(fields) => {
+        val f_new = fields.find({case(fi, ei) => !isValue(ei)})
+        val new_fields = fields  + (fi -> step(f_new))
+        Obj(new_fields)
+      }
+      *
+      */
+      
+      /* Search Get Field */
+      //case GetField(e1, f) => GetField(step(e1), f)
       /* Everything else is a stuck error. Should not happen if e is well-typed. */
       case _ => throw StuckError(e)
     }
