@@ -251,8 +251,18 @@ object Lab4 extends jsy.util.JsyApplication {
     }
   }
   
-  def substitute(e: Expr, v: Expr, x: String): Expr = {println(e)
+  /* Lecture 11/13 */
+  def substituteHelper(acc: Expr, param_arg: ((String, Typ), Expr)) : Expr = {
+      param_arg match{
+         case ((param_name, _), arg) => substitute(acc, arg, param_name)
+         }
+      }
+  
+  def substitute(e: Expr, v: Expr, x: String): Expr = {
+    //println(e)
     require(isValue(v))
+     /* Simple helper that calls substitute on an expression
+     * with the input value v and variable name x. */
     
     def subst(e: Expr): Expr = substitute(e, v, x)
     
@@ -260,12 +270,13 @@ object Lab4 extends jsy.util.JsyApplication {
       case N(_) | B(_) | Undefined | S(_) => e
       case Print(e1) => Print(subst(e1))
       case Unary(uop, e1) => Unary(uop, subst(e1))
-      case Binary(bop, e1, e2) => Binary(bop, subst(e1), subst(e2))
+      case Binary(bop, e1, e2) => Binary(bop, subst(e1), subst(e2)) 
       case If(e1, e2, e3) => If(subst(e1), subst(e2), subst(e3))
-      case Var(y) => if (x == y) v else e
+      case Var(y) => if (x == y) v else e //puts value in expr
+      //case Var(y) => if (x == y) v else Var(y) //puts value in expr
       case ConstDecl(y, e1, e2) => ConstDecl(y, subst(e1), if (x == y) e2 else subst(e2))
-      case Function(p, params, tann, e1) =>
-        Function(p, params, tann, subst(e1))
+      case Function(p, params, tann, e1) => Function(p, params, tann, e1)
+        //Function(p, params, tann, subst(e1))
       case Call(e1, args) =>
         Call(subst(e1), args)
       case Obj(fields) =>
@@ -303,21 +314,62 @@ object Lab4 extends jsy.util.JsyApplication {
       case If(B(e1), e2, e3) => if (e1) e2 else e3
       
       case ConstDecl(x, v1, e2) if isValue(v1) => substitute(e2, v1, x)
+      /* DoCall */
       case Call(v1, args) if isValue(v1) && (args forall isValue) =>
-        v1 match {
-          case Function(p, params, _, e1) => {
+        v1 match {	//they're all values
+          case Function(p, params, tann, e1) => {
+            val pa_list = params zip args
+            val e1p = pa_list.foldLeft(e1)(substituteHelper)
+          
+            /*
             val e1p = (params, args).zipped.foldRight(e1){
-              throw new UnsupportedOperationException
+              /* zip together formal parameters with their arguments 
+               * params are string, type
+               * foldLeft - function body will have several substitutions performed on it
+               * function body is an accumulator with substitution called for every item in the list
+               * val pa_list = params zip args
+               */
+              params match{
+                case (str, v) => substitute(v, args, str)
+              }
+              substitute()
+              /*
+               * def substituteHelper( acc: Expr, param_arg: ((String, Typ), Expr) : Expr =
+               * param_arg match{
+               * case ((param_name, _), arg) => substitute(acc, param_name, arg)
+               * 
+               * --
+               * val e1p = pa_list.foldLeft(e1)(substituteHelper)
+               * e1 is the zero here - starting point
+               */
             }
+            *
+            */
             p match {
-              case None => throw new UnsupportedOperationException
-              case Some(x1) => throw new UnsupportedOperationException
+              /* p is the optional name for the function; names allow for recursion
+               * call substitute with e1, param and actual arg value
+               * replace all occurences of paramteter name
+               *   */
+              case None => 
+                //throw new UnsupportedOperationException
+                Function(p, params, tann, e1p)
+              /*
+               * some: look up name and subtitute it in.  return function body
+               */
+              case Some(x1) => 
+                //throw new UnsupportedOperationException
+                substitute(Function(p, params, tann, e1p),e1p,x1)
             }
           }
           case _ => throw new StuckError(e)
         }
       /* DoGetField */
-      case GetField(v1, f) if isValue(v1) => throw new UnsupportedOperationException
+      case GetField(Obj(fields), fi) if (fields.forall { case (_, v) => isValue(v) }) =>
+        fields.get(fi) match {
+          case None => throw StuckError(e)
+          case Some(vi) => vi
+      }
+      
         
       /* Inductive Cases: Search Rules */
       case Print(e1) => Print(step(e1))
