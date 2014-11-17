@@ -199,7 +199,7 @@ object Lab4 extends jsy.util.JsyApplication {
           case _ => err(TUndefined, e1)
         }
         // Bind to env2 an environment that extends env1 with bindings for params.
-        val env2 = env1 ++ params
+        val env2 = env1 ++ params //match everything in env1 to everything in params
         // Match on whether the return type is specified.
         tann match {
           case None => TFunction(params, typeInfer(env2, e1))
@@ -258,8 +258,10 @@ object Lab4 extends jsy.util.JsyApplication {
          }
       }
   
+
+  
   def substitute(e: Expr, v: Expr, x: String): Expr = {
-    //println(e)
+    println(e)
     require(isValue(v))
      /* Simple helper that calls substitute on an expression
      * with the input value v and variable name x. */
@@ -273,20 +275,22 @@ object Lab4 extends jsy.util.JsyApplication {
       case Binary(bop, e1, e2) => Binary(bop, subst(e1), subst(e2)) 
       case If(e1, e2, e3) => If(subst(e1), subst(e2), subst(e3))
       case Var(y) => if (x == y) v else e //puts value in expr
-      //case Var(y) => if (x == y) v else Var(y) //puts value in expr
       case ConstDecl(y, e1, e2) => ConstDecl(y, subst(e1), if (x == y) e2 else subst(e2))
-      case Function(p, params, tann, e1) => Function(p, params, tann, e1)
-        //Function(p, params, tann, subst(e1))
-      case Call(e1, args) =>
-        Call(subst(e1), args)
-      case Obj(fields) =>
-        throw new UnsupportedOperationException
-      case GetField(e1, f) =>
-        GetField(subst(e1), f)
+      
+      case Function(p, params, tann, e1) =>
+        if (params.exists((t1:(String,Typ))=> t1._1 == x) || p==Some(x)){//._1 get first element of tuple
+          Function(p, params, tann,e1)
+        }else Function(p, params, tann, subst(e1))
+        
+      case Call(e1, args) => Call(subst(e1), args map subst) //arguments in the body of the function; need to map arguments going into function
+      
+      case Obj(fields) => Obj(fields.map{case (a, b) => (a, subst(b))})
+
+      case GetField(e1, f) => GetField(subst(e1), f)
     }
   }
   
-  def step(e: Expr): Expr = {
+  def step(e: Expr): Expr = { //println(e)
     require(!isValue(e))
     
     def stepIfNotValue(e: Expr): Option[Expr] = if (isValue(e)) None else Some(step(e))
@@ -299,6 +303,7 @@ object Lab4 extends jsy.util.JsyApplication {
       case Binary(Seq, v1, e2) if isValue(v1) => e2
       case Binary(Plus, S(s1), S(s2)) => S(s1 + s2)
       case Binary(Plus, N(n1), N(n2)) => N(n1 + n2)
+      
       /* add DoMinus, DoTimes, DoDiv */
       case Binary(Minus, N(n1), N(n2)) => N(n1 - n2)
       case Binary(Times, N(n1), N(n2)) => N(n1*n2)
@@ -316,49 +321,27 @@ object Lab4 extends jsy.util.JsyApplication {
       case ConstDecl(x, v1, e2) if isValue(v1) => substitute(e2, v1, x)
       /* DoCall */
       case Call(v1, args) if isValue(v1) && (args forall isValue) =>
-        v1 match {	//they're all values
-          case Function(p, params, tann, e1) => {
+        v1 match {	//they're all values 
+          case Function(p, params, _, e1) => {
             val pa_list = params zip args
             val e1p = pa_list.foldLeft(e1)(substituteHelper)
-          
-            /*
-            val e1p = (params, args).zipped.foldRight(e1){
-              /* zip together formal parameters with their arguments 
-               * params are string, type
-               * foldLeft - function body will have several substitutions performed on it
-               * function body is an accumulator with substitution called for every item in the list
-               * val pa_list = params zip args
-               */
-              params match{
-                case (str, v) => substitute(v, args, str)
-              }
-              substitute()
-              /*
-               * def substituteHelper( acc: Expr, param_arg: ((String, Typ), Expr) : Expr =
-               * param_arg match{
-               * case ((param_name, _), arg) => substitute(acc, param_name, arg)
-               * 
-               * --
-               * val e1p = pa_list.foldLeft(e1)(substituteHelper)
-               * e1 is the zero here - starting point
-               */
-            }
-            *
-            */
             p match {
               /* p is the optional name for the function; names allow for recursion
                * call substitute with e1, param and actual arg value
                * replace all occurences of paramteter name
                *   */
-              case None => 
-                //throw new UnsupportedOperationException
-                Function(p, params, tann, e1p)
+              case None => {
+            	  e1p
+              }
               /*
-               * some: look up name and subtitute it in.  return function body
+               * some: look up name and substitute it in.  return function body
                */
-              case Some(x1) => 
-                //throw new UnsupportedOperationException
-                substitute(Function(p, params, tann, e1p),e1p,x1)
+              case Some(x1) => { 
+                println("some")
+                println(e1p)
+	              substitute(e1p, v1, x1)
+              }
+              
             }
           }
           case _ => throw new StuckError(e)
@@ -366,7 +349,7 @@ object Lab4 extends jsy.util.JsyApplication {
       /* DoGetField */
       case GetField(Obj(fields), fi) if (fields.forall { case (_, v) => isValue(v) }) =>
         fields.get(fi) match {
-          case None => throw StuckError(e)
+          case None => throw new StuckError(e)
           case Some(vi) => vi
       }
       
@@ -381,24 +364,23 @@ object Lab4 extends jsy.util.JsyApplication {
       /*** Fill-in more cases here. ***/
       
       /* Search Call1 & Search Call2 */
-      //case Call(e1, args) => Call(step(e1), args) //might be missing the second case here
+      
+      case Call(e1, args) => e1 match{
+        case Function(_, _,_, _) => Call(e1, mapFirst(stepIfNotValue)(args)) //call2
+        case _ => Call(step(e1), args) //call1
+      }
+
+      
       /* Search Object */
       /*
        * can take a step by stepping on any of its component fields
        * make the step go on the first non-value as given by left-to-right iteraction of the collection
        * using Map.find
        */
-      /*
-      case Obj(fields) => {
-        val f_new = fields.find({case(fi, ei) => !isValue(ei)})
-        val new_fields = fields  + (fi -> step(f_new))
-        Obj(new_fields)
-      }
-      *
-      */
+      case Obj(fields) => Obj(fields.map{case (a, b) => (a, step(b))})
       
       /* Search Get Field */
-      //case GetField(e1, f) => GetField(step(e1), f)
+      case GetField(e1, f) => GetField(step(e1), f)
       /* Everything else is a stuck error. Should not happen if e is well-typed. */
       case _ => throw StuckError(e)
     }
