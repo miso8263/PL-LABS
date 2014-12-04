@@ -275,17 +275,17 @@ object Lab5 extends jsy.util.JsyApplication {
           case _ => err(typ(e1), e1)
         }
         
-      case GetField(expr, f) => expr match{
-        case Obj(fields) => fields.get(f) match{
-          case None => err(typ(e1), e1)
-          case Some(x) => ;typ(e2)
-        }
+        case GetField(expr, f) => typ(expr) match{
+          case TObj(tfields) => tfields.get(f) match{ //TObj has strings, types instead of string, expr
+            case None => err(typ(expr), expr)
+            case Some(x) => if(x == typ(e2)) typ(e2) else err(typ(e1), e1)
+          }
           case _ => err(typ(e1), e1)
         }
-      case _ => err(typ(e1), e1)
+        case _ => err(typ(e1), e1)
       }
       
-      case Unary(Cast(t), e1) => if( castOk(typ(e1), t) ) typ(e1) else err(typ(e1), e1)
+      case Unary(Cast(t), e1) => if( castOk(typ(e1), t) ) t else err(typ(e1), e1)
         
       /* Should not match: non-source expressions or should have been removed */
       case A(_) | Unary(Deref, _) | InterfaceDecl(_, _, _) => throw new IllegalArgumentException("Gremlins: Encountered unexpected expression %s.".format(e))
@@ -336,7 +336,7 @@ object Lab5 extends jsy.util.JsyApplication {
             }else Function(p, paramse, retty, subst(e1))
           }
           case Right((mode,fnam,ftype)) => {
-            val newbody = {
+            val newbody = { //if it doesn't have a name, substitute
               if (fnam != x && p != Some(x)) substitute(e1, esub, x) else e1
             }
             Function(p, paramse, retty, newbody)
