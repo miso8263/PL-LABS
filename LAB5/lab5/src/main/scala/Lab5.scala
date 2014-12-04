@@ -270,17 +270,19 @@ object Lab5 extends jsy.util.JsyApplication {
         case Var(x) => env.get(x) match{
           case None => err(typ(e1), e1)
           case Some((MConst, _)) => err(typ(e1), e1) //if it's constant it can't be a variable!
-          case Some(_) => typ(e2) //not extending the environment, just returning type
+          case Some((MVar, t)) => if (t == typ(e2)) typ(e2) else err(typ(e1), e1)
+           //not extending the environment, just returning type
+          case _ => err(typ(e1), e1)
         }
         
       case GetField(expr, f) => expr match{
         case Obj(fields) => fields.get(f) match{
           case None => err(typ(e1), e1)
-          case Some(x) => typ(e2)
+          case Some(x) => ;typ(e2)
         }
           case _ => err(typ(e1), e1)
         }
-        case _ => err(typ(e1), e1)
+      case _ => err(typ(e1), e1)
       }
       
       case Unary(Cast(t), e1) => if( castOk(typ(e1), t) ) typ(e1) else err(typ(e1), e1)
@@ -316,7 +318,7 @@ object Lab5 extends jsy.util.JsyApplication {
   /* Capture-avoiding substitution in e replacing variables x with esub. */
   def substitute(e: Expr, esub: Expr, x: String): Expr = {
     def subst(e: Expr): Expr = substitute(e, esub, x)
-    val ep: Expr = throw new UnsupportedOperationException
+    val ep: Expr = avoidCapture(freeVars(esub), e)  //need to avoid capturing 
     ep match {
       case N(_) | B(_) | Undefined | S(_) | Null | A(_) => e
       case Print(e1) => Print(subst(e1))
@@ -325,8 +327,22 @@ object Lab5 extends jsy.util.JsyApplication {
       case If(e1, e2, e3) => If(subst(e1), subst(e2), subst(e3))
       case Var(y) => if (x == y) esub else e
       case Decl(mut, y, e1, e2) => Decl(mut, y, subst(e1), if (x == y) e2 else subst(e2))
-      case Function(p, paramse, retty, e1) =>
-        throw new UnsupportedOperationException
+      case Function(p, paramse, retty, e1) =>{
+        paramse match{
+          case Left(params) => {
+            //same as lab 4
+            if (params.exists((t1:(String,Typ))=> t1._1 == x) || p==Some(x)){//._1 get first element of tuple
+            	Function(p, paramse, retty,e1)
+            }else Function(p, paramse, retty, subst(e1))
+          }
+          case Right((mode,fnam,ftype)) => {
+            val newbody = {
+              if (fnam != x && p != Some(x)) substitute(e1, esub, x) else e1
+            }
+            Function(p, paramse, retty, newbody)
+          }
+        }
+      }
       case Call(e1, args) => Call(subst(e1), args map subst)
       case Obj(fields) => Obj(fields map { case (fi,ei) => (fi, subst(ei)) })
       case GetField(e1, f) => GetField(subst(e1), f)
