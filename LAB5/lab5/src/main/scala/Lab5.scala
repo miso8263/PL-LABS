@@ -62,13 +62,23 @@ object Lab5 extends jsy.util.JsyApplication {
      */
     case (TNull, TObj(_)) => true
     case (_, _) if (t1 == t2) => true
-    case (TObj(fields1), TObj(fields2)) => fields1.forall{
+    case (TObj(fields1), TObj(fields2)) => {
+      
+      val DOWNarrow = fields1.forall{ 
       //all of fields1 must be in fields2 and vice versa
-      case(n, v) if (v == None) => true
       case(n, v) => fields2.get(n) match{
-        case None => false
-        case Some(other) => castOk(v, other) //make sure it's in fields1
+        case None => true
+        case Some(otherT) => if (otherT == v) true else false
+        }
       }
+      val UParrow = fields2.forall{ //UP arrow
+        case(n, v) => fields1.get(n) match{
+          case None => true
+          case Some(otherT) => if (otherT == v) true else false
+        }
+      }
+      DOWNarrow && UParrow
+      
     }
     case (TInterface(tvar, t1p), _) => castOk(typSubstitute(t1p, t1, tvar), t2)
     case (_, TInterface(tvar, t2p)) => castOk(t1, typSubstitute(t2p, t2, tvar))
@@ -98,6 +108,7 @@ object Lab5 extends jsy.util.JsyApplication {
       case B(_) => TBool
       case Undefined => TUndefined
       case S(_) => TString
+      case Null => TNull //had to write tnull
       case Var(x) =>
         val (_, t) = env(x)
         t
@@ -216,31 +227,63 @@ object Lab5 extends jsy.util.JsyApplication {
           //list of parameters; just check param lengths, type of each parameter
           (params, args).zipped.foreach {
             //same as lab 4
-            throw new UnsupportedOperationException
+           (paramX, argsY) => (paramX, argsY) match 
+            {
+              case ((str, tp), ta) => if (tp != typ(ta)) err(tp, ta)
+            }
           }
           tret
         }
-        case tgot @ TFunction(Right((mode,_,tparam)), tret) =>
+        case tgot @ TFunction(Right((mode,_,tparam)), tret) if (args.length == 1) => {
           //single parameter, has a mode, string, type
           //if the list is not 1item::Nil, we have a problem
+          val typearg = typ(args(0)) //only one argument
           mode match{
-            case PRef => throw new UnsupportedOperationException //TypeCallRef; reference is pointing to a location
+            case PRef => {
+              //TypeCallRef; reference is pointing to a location
               //must have a location expression or raise an error
-            case _ => throw new UnsupportedOperationException//not ref
+              //use helper function isLExpr
+              if ( isLExpr(args(0)) ) {
+                if (typearg == tparam) tret else err(typearg, args(0))
+              }
+              else err(typearg, args(0))
+            }
+            	
+            case _ => if (typearg == tparam) tret else err(typearg, args(0))//not ref
+            //just have to have the same type
           }
+          
+        }
         case tgot => err(tgot, e1)
       }
       
       /*** Fill-in more cases here. ***/
       
-      case Decl(e1, x, v1, e2) => e1 match{
+      case Decl(mut, x, e1, e2) => {
         //find out type of e1, then map that type and the mutability type to x
         //add into environment
         //recurse on enhanced environment and e2
-        case _ => throw new UnsupportedOperationException
+        typeInfer((env + (x -> (mut, typ(e1)))), e2)
       }
       
-      case Assign(e1, e2) => throw new UnsupportedOperationException
+      case Assign(e1, e2) => e1 match{
+        case Var(x) => env.get(x) match{
+          case None => err(typ(e1), e1)
+          case Some((MConst, _)) => err(typ(e1), e1) //if it's constant it can't be a variable!
+          case Some(_) => typ(e2) //not extending the environment, just returning type
+        }
+        
+      case GetField(expr, f) => expr match{
+        case Obj(fields) => fields.get(f) match{
+          case None => err(typ(e1), e1)
+          case Some(x) => typ(e2)
+        }
+          case _ => err(typ(e1), e1)
+        }
+        case _ => err(typ(e1), e1)
+      }
+      
+      case Unary(Cast(t), e1) => if( castOk(typ(e1), t) ) typ(e1) else err(typ(e1), e1)
         
       /* Should not match: non-source expressions or should have been removed */
       case A(_) | Unary(Deref, _) | InterfaceDecl(_, _, _) => throw new IllegalArgumentException("Gremlins: Encountered unexpected expression %s.".format(e))

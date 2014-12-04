@@ -113,7 +113,7 @@ object ast {
    * 
    * Aside: This is also known as the State monad.
    */
-  sealed class DoWith[W,R](doer: W => (W,R)) {		//W = memory; R = expression
+  sealed class DoWith[W,R](doer: W => (W,R)) {
     def apply(w: W) = doer(w)
 
     def map[B](f: R => B): DoWith[W,B] = new DoWith[W,B]({
