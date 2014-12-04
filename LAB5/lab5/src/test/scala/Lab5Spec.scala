@@ -15,6 +15,12 @@ class Lab5Spec extends FlatSpec {
   // Probably want to write some tests for castOk, typeInfer, substitute, and step.
   
   // have test for each judgement rule in the order that they are listed in the lab  
+  "TypeNumber" should "infer number type" in{
+    assertResult(TNumber){
+      typeInfer(Map(), N(42))
+    }
+  }
+  
   "DoNeg" should "negate values" in {
     val e = Unary(Neg, N(42))
     val (mp:Mem, ep:Expr) = step(e)(Mem.empty)	//this is how to use step
@@ -65,5 +71,20 @@ class Lab5Spec extends FlatSpec {
       ep
     }
   }
+  
+  "DoAssignVar" should "assign variable to value" in {
+    val e = Decl(MVar, "x", N(42), Assign(Var("x"), N(47)))
+    val (mp: Mem, ep: Expr) = step(e)(Mem.empty)
+    val aref = ep match{
+      case Assign(Unary(Deref, a@A(_)), N(47)) => Some(a)
+      case _ => None
+      
+    }
+    val(mpp, epp: Expr) = step(ep)(mp)
+    assertResult(N(47)){
+      mpp get(aref get) get
+    }
+    assertResult(N(47)){epp}
+   }
   
 }

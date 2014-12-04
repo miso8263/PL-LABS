@@ -388,11 +388,23 @@ object Lab5 extends jsy.util.JsyApplication {
       //we're also using for(...) yield; for is a combination of both filter and map, applied on collections
       //filter filters out the elements based on the condition from the list
       // ex. for (p <- persons p.age>50) yield p.name     generate output list on the fly
-      case Obj(fields) if (fields forall { case (_, vi) => isValue(vi)}) =>
-        throw new UnsupportedOperationException
-      case GetField(a @ A(_), f) =>
-        throw new UnsupportedOperationException
+      case Obj(fields) if (fields forall { case (_, vi) => isValue(vi)}) => {
+        // assuming object not in memory already, add obj -> fields:values to memory
+        Mem.alloc(Obj(fields)) map{a:A => a:Expr}
+      }
         
+      case GetField(a @ A(_), f) => {
+        // retrieve value bound to string f within object a
+        doget map { (mem:Mem) =>
+        	mem.get(a) match{ //a is in some memory
+        	  case Some(Obj(fields)) => fields.get(f) match{ // f should be in the obj in memory
+        	    case Some(v) => v
+        	    case None => throw StuckError(e)
+        	  }
+        	  case _ => throw StuckError(e)
+        	}
+        }
+      }
       case Call(v1, args) if isValue(v1) =>
         def substfun(e1: Expr, p: Option[String]): Expr = p match {
           case None => e1
@@ -403,15 +415,31 @@ object Lab5 extends jsy.util.JsyApplication {
           case _ => throw StuckError(e)
         } 
       
-      case Decl(MConst, x, v1, e2) if isValue(v1) =>
-        throw new UnsupportedOperationException
-      case Decl(MVar, x, v1, e2) if isValue(v1) =>
-        throw new UnsupportedOperationException
+      case Decl(MConst, x, v1, e2) if isValue(v1) => {
+        //DoConst - extending e2 with v1 substituted for x; memory unchanged
+        //substitute takes expression, substitute expression, string
+        doreturn(substitute(e2, v1, x)) //make it a DoWith; memory expression tuple
+      }
+      case Decl(MVar, x, v1, e2) if isValue(v1) => {
+        //DoVar - extending e2 with deref pointer a substituted for x
+        // memory extended with a -> v1
+        Mem.alloc(v1) map { a => substitute(e2, Unary(Deref, a), x)}
+      }
 
-      case Assign(Unary(Deref, a @ A(_)), v) if isValue(v) =>
-        for (_ <- domodify { (m: Mem) => (throw new UnsupportedOperationException): Mem }) yield v
+      case Assign(Unary(Deref, a @ A(_)), v) if isValue(v) => // add map from a -> v to memory
+        for (_ <- domodify { (m: Mem) => (m + (a, v)): Mem }) yield v
         
       /*** Fill-in more Do cases here. ***/
+      case Unary(Deref, a @ A(_)) => {
+        // DoDeref.  A is in Memory, we return memory of a when dereferencing
+        doget map { (M:Mem) => M(a)} 
+      }
+      
+      case Unary(Cast(t), v1) => v1 match{
+        case Null => doreturn(Null)  //return value without type
+        case Obj(_) => throw new UnsupportedOperationException
+        case _ => throw new StaticTypeError(t, e, v1)
+      }
       
       /* Base Cases: Error Rules */
       /*** Fill-in cases here. ***/
@@ -428,14 +456,38 @@ object Lab5 extends jsy.util.JsyApplication {
       case If(e1, e2, e3) =>
         for (e1p <- step(e1)) yield If(e1p, e2, e3)
       case Obj(fields) => fields find { case (_, ei) => !isValue(ei) } match {
-        case Some((fi,ei)) =>
-          throw new UnsupportedOperationException
+        case Some((fi,ei)) => {
+          for (eip <- step(ei)) yield Obj(fields + (fi -> eip)) //return object with fields with new binding
+        }
         case None => throw StuckError(e)
       }
-      case GetField(e1, f) => throw new UnsupportedOperationException
+      case GetField(e1, f) => {
+        //need null dereference error?
+        for (e1p <- step(e1)) yield GetField(e1p, f)
+      }
       
       /*** Fill-in more Search cases here. ***/
-
+          
+      case Decl(mode, x, e1, e2) => for (e1p <- step(e1) ) yield Decl(mode, x, e1p, e2)
+      
+      case Assign(e1, e2) => {      
+        //searchAssign 2
+        if (isLValue(e1)) {
+          for (e2p <- step(e2)) yield Assign(e1, e2p)
+        }
+        else{ //searchAssign 1
+          for (e1p <- step(e1)) yield Assign(e1p, e2)
+        }
+      }
+      
+      case Call(e1, args) => e1 match{ //very similar to lab 4's call search
+        //SearchCall 2; should also handle SearchCallVar and SearchCallRef
+        case Function(_, _, _, _) => for (argp <- mapFirstWith(stepIfNotValue)(args)) yield Call(e1, argp)
+        
+        //SearchCall 1
+        case _ => for (e1p <- step(e1)) yield Call(e1p, args)
+      }
+    		  
       /* Everything else is a stuck error. */
       case _ => throw StuckError(e)
     }
