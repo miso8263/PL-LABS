@@ -405,13 +405,50 @@ object Lab5 extends jsy.util.JsyApplication {
         	}
         }
       }
+        
       case Call(v1, args) if isValue(v1) =>
-        def substfun(e1: Expr, p: Option[String]): Expr = p match {
+        def substfun(e1: Expr, p: Option[String]): Expr = p match { // helper function
           case None => e1
-          case Some(x) => substitute(e1, v1, x)
+          case Some(x) => substitute(e1, v1, x) //do call rec
         }
         (v1, args) match {
           /*** Fill-in the DoCall cases, the SearchCall2, the SearchCallVar, the SearchCallRef  ***/
+		  
+		  // Either: Left
+		  case (Function(p, Left(params),_, e1), args) if params.length == args.length => {
+		  //similar to lab 4
+			val e1p = (params, args).zipped.foldRight(e1){
+			//e1 is substitituing for each argument
+				(paramsp,acc)=> paramsp match{
+					case((name,_),value) => substitute(acc,value,name)
+				}
+			}
+			p match {
+				case None => doreturn(e1p) // not named, not recursive
+				case Some(x1) => doreturn(substitute(e1p,v1,x1)) //potentially recursive; substitute for name
+			}
+		  }
+		  // Either: Right
+		  //Do Call Var
+		  case (Function(p, Right((PVar, fname, _)),_, e1), argv :: Nil) if isValue(argv) => {
+			Mem.alloc(argv) map { argp => substfun(substitute(e1, Unary(Deref, argp), fname), p)}
+		  }
+		  //Do Call Ref
+		  case (Function(p, Right((PRef, fname, _)),_, e1), arglv :: Nil) if isLValue(arglv) =>{
+			doreturn(substfun(substitute(e1, arglv, fname), p))
+		  }
+		  //Do Call Name
+		  case (Function(p, Right((PName, fname, _)),_, e1), arg :: Nil) =>{
+			doreturn(substfun(substitute(e1, arg, fname), p))
+		  }
+		  //Search Call Var
+		  case (Function(p, Right((PVar, fname, _)), _, e1), arg :: Nil) => {
+			step(arg) map {argp => Call(v1, argp :: Nil)}
+		  }
+		  //Search Call Ref
+		  case (Function(p, Right((PRef, fname, _)), _, e1), arg :: Nil) => {
+			step(arg) map {argp => Call(v1, argp :: Nil)}
+		  }
           case _ => throw StuckError(e)
         } 
       
@@ -430,6 +467,15 @@ object Lab5 extends jsy.util.JsyApplication {
         for (_ <- domodify { (m: Mem) => (m + (a, v)): Mem }) yield v
         
       /*** Fill-in more Do cases here. ***/
+        
+      case Assign(GetField(obj_a: A, f), v) if isValue(v) => {
+       for (_ <- domodify {(m: Mem) => m(obj_a) match { //object in memory
+          case Obj(fields) => m + (obj_a -> Obj(fields + ((f, v)))) //bind object to field, add to memory
+          case _ => throw StuckError(e)
+          }
+        }) yield v
+      }
+        
       case Unary(Deref, a @ A(_)) => {
         // DoDeref.  A is in Memory, we return memory of a when dereferencing
         doget map { (M:Mem) => M(a)} 

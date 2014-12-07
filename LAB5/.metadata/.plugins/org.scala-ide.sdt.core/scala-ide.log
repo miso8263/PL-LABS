@@ -37,3 +37,10 @@ java.lang.RuntimeException: bad position: [10260:10248]
 2014-12-04 12:05:13,923 ERROR [Worker-91] - System.err - SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 2014-12-04 12:05:13,928 ERROR [Worker-91] - System.err - SLF4J: Defaulting to no-operation (NOP) logger implementation
 2014-12-04 12:05:13,928 ERROR [Worker-91] - System.err - SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2014-12-05 20:22:19,514 ERROR [Worker-22] - System.err - SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2014-12-05 20:22:19,534 ERROR [Worker-22] - System.err - SLF4J: Defaulting to no-operation (NOP) logger implementation
+2014-12-05 20:22:19,534 ERROR [Worker-22] - System.err - SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2014-12-07 07:15:09,664  WARN [org.eclipse.jdt.internal.ui.text.JavaReconciler] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during implicit highlighting.
+2014-12-07 09:30:05,522 ERROR [Worker-103] - System.err - SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2014-12-07 09:30:05,522 ERROR [Worker-103] - System.err - SLF4J: Defaulting to no-operation (NOP) logger implementation
+2014-12-07 09:30:05,522 ERROR [Worker-103] - System.err - SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
